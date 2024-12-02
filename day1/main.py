@@ -4,10 +4,10 @@ file_input = open("day1-input.txt", "r")
 input_string = file_input.read()
 input_string = input_string.splitlines()
 
+# Problem 1
 total = 0
 list1 = []
 list2 = []
-
 for line in input_string:
     num_list = line.split()
     list1.append(int(num_list[0]))
@@ -34,3 +34,10 @@ print(total)
 #     for i in range(len(num_list[1])):
 #         print(abs(num_list[0][i] - num_list[1][i]))
 #         total += abs(num_list[0][i] - num_list[1][i])
+
+
+
+total1 = 0
+for num in list1:
+    total1 += num * list2.count(num)
+print(total1)
